@@ -1,4 +1,4 @@
-from tranformers import AutoTokenizer
+from transformers import AutoTokenizer
 import streamlit as st
 # Force full import before anything else runs
 try:

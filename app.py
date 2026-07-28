@@ -1,5 +1,11 @@
+from tranformers import AutoTokenizer
 import streamlit as st
-from transformers import pipeline, AutoTokenizer
+# Force full import before anything else runs
+try:
+    from transformers import pipeline
+except ImportError as e:
+    st.error("Dependencies still loading — please refresh in 10 seconds.")
+    st.stop()
 
 st.set_page_config(page_title="NLP Demo", page_icon="🤖", layout="centered")
 

@@ -1,8 +1,7 @@
-from transformers import AutoTokenizer
 import streamlit as st
 # Force full import before anything else runs
 try:
-    from transformers import pipeline
+    from transformers import pipeline, AutoTokenizer
 except ImportError as e:
     st.error("Dependencies still loading — please refresh in 10 seconds.")
     st.stop()
